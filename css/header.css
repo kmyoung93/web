@@ -30,18 +30,10 @@ header:hover{
     max-height: 600px;
 }
 
-header .common-frame{
-
-}
-
 .header-top{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    & .sns{
-        display: flex;
-        gap: var(--space-normal);
-    }
     & .lnb{
         display: flex;
         gap: var(--space-normal);
@@ -49,6 +41,10 @@ header .common-frame{
         font-size: 0.8rem;
     }
 }
+.sns{
+        display: flex;
+        gap: var(--space-normal);
+    }
 
 .header-bottom{
     padding-top: 0.5rem;
