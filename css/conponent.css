@@ -1,0 +1,13 @@
+.btn-1{
+    border:1px solid var(--bakee-brown-main-800);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+}
+.btn-1:hover{
+    background: var(--bakee-brown-main-800);
+    color: #fff;
+}
+.btn-1:active{
+    color: var(--bakee-brown-200);
+}

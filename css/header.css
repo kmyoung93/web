@@ -1,0 +1,267 @@
+header{
+    font-size: 0.9rem;
+    overflow: hidden;
+    max-height: 160px;
+    transition: all 0.5s ease 0s;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10000000;
+    transition: all 0.5s ease 0s;
+}
+header.fold{
+    transform: translateY(-106px);
+}
+
+header:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 158px;
+    height: 2px;
+    background: var(--bakee-brown-main-800);
+    z-index: -100;
+}
+
+header:hover{
+    max-height: 600px;
+}
+
+header .common-frame{
+
+}
+
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & .sns{
+        display: flex;
+        gap: var(--space-normal);
+    }
+    & .lnb{
+        display: flex;
+        gap: var(--space-normal);
+        justify-content: flex-end;
+        font-size: 0.8rem;
+    }
+}
+
+.header-bottom{
+    padding-top: 0.5rem;
+}
+
+.sns img{
+    height: 1.2rem;
+}
+
+.header-top>*{
+    flex: 1;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.gnb{
+    display: flex;
+    gap: var(--space-3x-large);
+    justify-content: center;
+}
+
+.gnb>li>a{
+    display: block;
+    padding: var(--space-x-small) 0;
+    font-weight: var(--font-strong);
+    text-align: center;
+}
+
+.gnb ul{
+    padding-top: var(--space-normal);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-normal);
+    font-size: 0.8rem;
+}
+
+header a:hover{color: var(--bakee-brown-main-800); text-decoration: underline;}
+.header-smart{
+    display: none;
+}
+.hidden-gnb{display: none;}
+
+@media (max-width: 1440px){
+    /* tab 디자인 */
+    .pc{display: none;}
+
+    .header-smart{
+        display: block;
+        background-color: #fff;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 10000;
+    }
+    .header-smart .common-frame{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header-smart .common-frame:before{
+        content:"";
+        flex: 1;
+    }
+    .header-smart .common-frame>*{
+        flex: 1;
+    }
+
+    .btn-all-menu{
+        text-align: right;
+    }
+
+    .hidden-gnb{
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transform: translateX(100%);
+        transition: all 0.7s ease 0s;
+        z-index: 20000;
+    }
+
+    .hidden-gnb.on{
+        transform: translateX(0%);
+    }
+
+    .hg3{
+        max-height: 60vh;
+        overflow: auto;
+    }
+
+    .hg1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    .btn-close img{
+        height: 1.2rem;
+        cursor: pointer;
+    }
+
+    .hg2{
+        background-color: var(--bakee-brown-main-800);
+    }
+
+    .hg2 ul{
+        display: flex;
+        gap: var(--space-normal);
+        color: #fff;
+    }
+
+    .hg2 ul a{
+        display: block;
+        padding: 1rem 0;
+    }
+
+    .gnb-smart{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--sapce-2x-large,3rem) var(--space-normal,1rem);
+        padding: var(--sapce-2x-large,3rem) 0;
+    }
+
+    .gnb-smart>li{
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-x-large,2rem);
+    }
+
+    .gnb-smart>li>a{
+        color: var(--bakee-brown-main-800);
+        font-weight: var(--font-strong);
+        font-size: .9rem;
+    }
+
+    .gnb-smart ul{
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-normal,1rem);
+        font-size: .8rem;
+        border-left: 2px solid var(--bakee-brown-main-800);
+        padding-left: 0.5rem;
+    }
+
+    .hg4{
+        padding: var(--space-x-large) 0;
+    }
+
+    .hg4 .sns{
+        display: flex;
+        justify-content: flex-end;
+        gap: var(--space-normal,1rem);
+    }
+}
+
+@media (max-width: 768px){
+    .gnb-smart{
+        display: block;
+    }
+
+    .gnb-smart ul{
+        border: none;
+    }
+
+    .gnb-smart>li{
+        max-height: 40px;
+        overflow: hidden;
+        gap: var(--space-normal);
+        transition: all 0.7s ease 0s;
+    }
+
+    .gnb-smart>li.on{
+        max-height: 500px;
+    }
+
+    .gnb-smart>li.on>a{
+        color: var(--bakee-brown-main-800);
+        border-bottom: 1px solid var(--bakee-brown-main-800);
+    }
+
+    .gnb-smart>li>a{
+        color: #000;
+        border-bottom: 1px solid var(--bakee-brown-main-800);
+        height: 40px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+
+    .gnb-smart>li>a::after{
+        content: "";
+        height: 1.2rem;
+        aspect-ratio: 1/1;
+        background: url(../img/Chevron\ down.svg) no-repeat 50% 50% / contain;
+    }
+    
+    .gnb-smart>li.on>a::after{
+        background: url(../img/Chevron\ up.svg) no-repeat 50% 50% / contain;
+    }
+
+}

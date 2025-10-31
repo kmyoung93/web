@@ -1,0 +1,131 @@
+:root{
+    /* basic size 1rem */
+    --basic-font-pc:20px;
+    --basic-font-tab:18px;
+    --basic-font-mobile:14px;
+
+    /* color variation */
+    --bakee-brown-100:#FDE1C5;
+    --bakee-brown-200:#F9C898; 
+    --bakee-brown-300:#F2B170; 
+    --bakee-brown-400:#E99D50; 
+    --bakee-brown-500:#DD8B38; 
+    --bakee-brown-600:#CD7A27; 
+    --bakee-brown-700:#B8691B;        
+    --bakee-brown-main-800:#A05913;
+    --bakee-brown-900:#874A0E;  
+
+    --font-strong:700;
+    --font-normal:400;
+
+    /* line-height */
+    --base-line-height:1.2;
+    --text-line-height:1.4;
+
+    /* spacing */
+    --space-normal:1rem;
+    --space-x-small:0.5rem;
+    --space-2x-small:0.25rem;
+    --space-x-large:2rem;
+    --space-2x-large:3rem;
+    --space-3x-large:6rem;
+
+    /* semantic color */
+    --color-inactive:#777;
+
+    /* device width */
+    --device-tab: 1440px;
+    --device-mobile: 768px;
+}
+html{
+    font-size: var(--basic-font-pc);
+    font-family: 'Pretendard', sans-serif;
+    line-height: var(--base-line-height);
+}
+
+h1{
+    font-size: 1.6rem;
+    font-weight: var(--font-strong);
+}
+h2{
+    font-size: 1.4rem;
+    font-weight: var(--font-strong);
+}
+h3{
+    font-size: 1.25rem;
+    font-weight: var(--font-strong);
+}
+h4{
+    font-size: 1rem;
+    font-weight: var(--font-strong);
+}
+p{
+    font-size: 1rem;
+    line-height: var(--text-line-height);
+}
+.b2{
+    font-size: 0.9rem;
+}
+.detail{
+    font-size: 0.8rem;
+}
+.pf{
+    font-family: 'aboreto', system-ui;
+}
+
+.common-frame{
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.logo img{height: 5rem;}
+.btn-all-menu img{height: 1.2rem;}
+
+.slider-container {
+  overflow-x: auto;
+  /* 슬라이드처럼 멈춤 /
+  / scroll-snap-type: x mandatory;  /
+  -webkit-overflow-scrolling: touch; / iOS 부드러운 스크롤 */
+  white-space: nowrap;
+  display: flex;
+}
+
+.slider-track {
+  display: flex;
+}
+
+/* webkit 계열의 브라우저 -> 크롬 엣지 사파리 */
+::-webkit-scrollbar{
+    width: 0.25rem;
+    height: 0.25rem;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--bakee-brown-200);
+    /* border-radius: 10px; */
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--bakee-brown-600);
+    /* border-radius: 10px; */
+}
+
+@media (max-width:1440px){
+    html{
+        font-size: var(--basic-font-tab);
+    }
+    .common-frame{
+        width: auto;
+        margin: 0 2rem;
+    }
+}
+
+@media (max-width: 768px){
+    html{
+        font-size: var(--basic-font-mobile);
+    }
+    .common-frame{
+        width: auto;
+        margin: 0 1rem;
+    }
+}
