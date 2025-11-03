@@ -3,14 +3,6 @@
     .mo-slide{display: none;}
     .tab-slide{display: none;}
 
-    main{
-        margin-top: 94px;
-    }
-
-    header.fold~main{
-    margin-top: 94px;
-    }
-
     .banner-cake{
         height: 360px;
     }

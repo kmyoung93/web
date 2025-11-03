@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,10 +32,6 @@
     <link rel="stylesheet" href="./css/conponent.css?ver=1.0">
     <link rel="stylesheet" href="./css/header.css?ver=1.0">
     <link rel="stylesheet" href="./css/footer.css?ver=1.0">
-    <link rel="stylesheet" href="./css/style-pc.css?ver=1.0">
-    <link rel="stylesheet" href="./css/style-tab-1440.css?ver=1.0">
-    <link rel="stylesheet" href="./css/style-tab-1024.css?ver=1.0">
-    <link rel="stylesheet" href="./css/style-mo-768.css?ver=1.0">
 
     <!-- scroll bar -->
     <script src="./js/scrollbar.js"></script>
@@ -44,6 +40,13 @@
     <!-- swiper js -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- 개별 스타일 -->
+     <link rel="stylesheet" href="./css/brand-1920.css">
+     <link rel="stylesheet" href="./css/brand-1440.css">
+     <link rel="stylesheet" href="./css/brand-768.css">
+     <link rel="stylesheet" href="./css/brand-320.css">
+
 </head>
 <body>
     <header class="pc">
@@ -216,167 +219,61 @@
     </div>
 
     <main>
-        <div class="swiper hero-banner-slider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img class="pc-slide" src="./img/main/hero_slider/pc/slide1_pc.jpg" alt="베이글 샌드위치">
-                    <img src="./img/main/hero_slider/tab/slide1_tab.jpg" alt="베이글 샌드위치" class="tab-slide">
-                    <img src="./img/main/hero_slider/mo/slide1_mo.jpg" alt="베이글 샌드위치" class="mo-slide">
-                </div>
-                <div class="swiper-slide">
-                    <img class="pc-slide" src="./img/main/hero_slider/pc/slide2_pc.jpg" alt="베이키 라떼">
-                    <img src="./img/main/hero_slider/tab/slide2_tab.jpg" alt="베이키 라떼" class="tab-slide">
-                    <img src="./img/main/hero_slider/mo/slide2_mo.jpg" alt="베이키 라떼" class="mo-slide">
-                </div>
-                <div class="swiper-slide">
-                    <img class="pc-slide" src="./img/main/hero_slider/pc/slide3_pc.jpg" alt="모닝세트 8:00~10:00 베이글+아메리카노 세트 1000원 할인">
-                    <img src="./img/main/hero_slider/tab/slide3_tab.jpg" alt="모닝세트 8:00~10:00 베이글+아메리카노 세트 1000원 할인" class="tab-slide">
-                    <img src="./img/main/hero_slider/mo/slide3_mo.jpg" alt="모닝세트 8:00~10:00 베이글+아메리카노 세트 1000원 할인" class="mo-slide">
-                </div>    
+        <div class="common-frame brand-banner">
+            <div class="brand-txt">
+                <h1 class="pf">
+                    Your Warm<br>
+                    Neighborhood<br>
+                    Bakery<br>
+                </h1>
+                <h2>당신 곁의 따뜻한 동네빵집</h2>
+                <p><em>Bakee</em>의 꿈은 단순합니다.</p>
+                <p>늘 당신의 일상 가까이에서 작지만 확실한 행복을 전하는 것.<br>
+                    그것이 바로 우리의 이야기입니다.</p>
             </div>
-            <div class="swiper-pagination pgcolor"></div>
-        </div>
-        <script>
-            const heroBannerSlider = new Swiper('.hero-banner-slider', {
-                // Optional parameters
-                direction: 'horizontal',
-                loop: true,
+            <figure class="brand-img">
+                <img src="./img/brandstory/bs_1.jpg" alt="따뜻한 동네 빵집의 친근한 맛">
+            </figure>
+       </div> 
 
-                // If we need pagination
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-
-                speed: 1000
-            });
-        </script>
-    <div class="common-frame signature">
-            <h1>오늘 뭐 먹지? Bakee Pick!</h1>
-            <p>오늘 Bakee에서 제일 인기 있는 빵만 골랐어요. 고민 말고 바로 집어가세요!</p>
-        <div class="swiper signature-slider">
-            <ul class="signature-items swiper-wrapper">
-                <li class="sig-item swiper-slide">
-                    <a href="#">
-                        <figure><img src="./img/main/sig-item/sig-1.jpg" alt="구름 버터크림 번 섬네일 이미지"></figure>
-                        <h4>구름 버터크림 번</h4>
-                        <p>폭신한 브리오슈 번 속에 직접 만든 달콤한 버터크림을 듬뿍! 한 입 베어 물면 입안에서 사르르 녹아요.</p>
-                    </a>
-                </li>
-                <li class="sig-item swiper-slide">
-                    <a href="#">
-                        <figure><img src="./img/main/sig-item/sig-2.jpg" alt="밤 가득 크림빵 섬네일 이미지"></figure>
-                        <h4>밤 가득 크림빵</h4>
-                        <p>고소한 밤과 부드러운 생크림이 가득 들어간 Bakee 인기 No.1</p>
-                    </a>
-                </li>
-                <li class="sig-item swiper-slide">
-                    <a href="#">
-                        <figure><img src="./img/main/sig-item/sig-3.jpg" alt="시나몬 러브 롤 섬네일 이미지"></figure>
-                        <h4>시나몬 러브 롤</h4>
-                        <p>은은한 시나몬 향 + 달콤한 글레이즈 = 커피와 찰떡궁합</p>
-                    </a>
-                </li>
-                <li class="sig-item swiper-slide">
-                    <a href="#">
-                        <figure><img src="./img/main/sig-item/sig-4.jpg" alt="데일리 사워도우 섬네일 이미지"></figure>
-                        <h4>데일리 사워도우</h4>
-                        <p>매일 다른 토핑으로 즐기는 건강한 저온 발효 사워도우</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <script>
-            const signatureSlider = new Swiper('.signature-slider', {
-                // Optional parameters
-                direction: 'horizontal',
-                loop: true,
-
-                slidesPerView: 1.2,
-                spaceBetween: 14,
-
-                breakpoints: {
-                    768: {
-                    // 화면 너비가 768픽셀 이상인 경우
-                    slidesPerView: 3.2,
-                    spaceBetween: 18,
-                    },
-                    1440: {
-                    slidesPerView: 4,
-                    spaceBetween: 20,
-                    },
-                },
-            });
-        </script>
-    </div>
-    <div class="banner-cake">
-        <div class="common-frame">
-            <h1>For Every Special Day, Cakes Come to You</h1>
-            <p>소중한 순간을 달콤하게 채워드립니다.</p>
-        </div>
-    </div>
-    <div class="common-frame off-store">
-        <section>
-            <h1>bakee는 언제나 가까이에 있어요</h1>
-            <h3>매장에서 만나는 작은 행복</h3>
+       <div class="common-frame story">
+            <h3>
+                새벽에서 아침까지 이어지는 장인의 약속
+            </h3>
             <p>
-                따뜻한 빵 한 조각이 필요한 순간, 매장에서 기다리고 있습니다.
+                가장 신선한 재료와 변함없는 마음으로 구워낸 빵은 바쁜 아침에도 따뜻한 위로가 되어 드립니다.
             </p>
-            <a href="#" class="btn-1">
-                오프라인 매장 찾기
-            </a>
-        </section>
-        <figure>
-            <img src="./img/main/off-store/off-store.jpg" alt="">
-        </figure>
-    </div>
-    <div class="common-frame news">
-        <div class="news-title">
-            <h1>Bakee News & Updates</h1>
-            <p>베이키에서 준비한 새로운 소식과 안내를 확인해보세요.</p>
-        </div>
-        <ul class="news-list">
-            <li>
-                <a href="#">
-                    🌱 환경을 위한 작은 실천
-                </a>
-                <span class="date">2025-07-25</span>
-            </li>
-            <li>
-                <a href="#">
-                    🎁 bakee 멤버십 안내
-                </a>
-                <span class="date">2025-08-20</span>
-            </li>
-            <li>
-                <a href="#">
-                    🚚 온라인 케이크 배송 서비스 확대
-                </a>
-                <span class="date">2025-08-28</span>
-            </li>
-            <li>
-                <a href="#">
-                    🍂 가을 신메뉴 출시
-                </a>
-                <span class="date">2025-09-05</span>
-            </li>
-        </ul>
-    </div>
-    <div class="common-frame benefit">
-        <figure class="benefit-img">
-            <img src="./img/main/benefit/benefit-card.jpg" alt="bakee 제휴 카드">
-        </figure>
-        <div class="benefit-txt">
-            <h1>베이키와 함께하는 프리미엄 제휴 혜택</h1>
-            <p>소중한 순간을 더욱 가치 있게, 제휴 카드로 누리는 특별 할인.</p>
-            <a href="#" class="btn-1">혜택 더 알아보기</a>
-        </div>
-    </div>
+            <section class="story-1">
+                <figure>
+                    <img src="./img/brandstory/bs_2.jpg" alt="새벽, 최고의 재료를 향한 약속">
+                </figure>
+                <div class="txt-story">
+                    <h4>새벽, 최고의 재료를 향한 약속</h4>
+                    <p>Bakee의 하루는 해가 뜨기 전부터 시작됩니다.<br>가장 신선하고 믿을 수 있는 재료만을 엄선하여 공수하며, 정직한 빵의 기본을 다집니다.</p>
+                    <p>이 순간의 노력은 곧 하루 종일 변함없는 맛과 향기를 지켜내기 위한 우리의 약속입니다.</p>
+                </div>
+            </section>
+            <section class="story-2">
+                <figure>
+                    <img src="./img/brandstory/bs_3.jpg" alt="장인의 손길로 완성되는 과정">
+                </figure>
+                <div class="txt-story">
+                    <h4>장인의 손길로 완성되는 과정</h4>
+                    <p>새벽에 공수한 재료는 숙련된 장인의 손끝에서 빵으로 태어납니다.<br> 시간을 들여 반죽을 숙성하고, 온도와 습도를 세심하게 조율하며, 정성과 노하우를 더해 구워냅니다.</p>
+                    <p>이 모든 과정은 단순한 제조가 아니라, 한 덩어리의 빵 속에 깊이 있는 풍미와 감성을 담아내는 예술입니다.</p>
+                </div>
+            </section>
+            <section class="story-1">
+                <figure>
+                    <img src="./img/brandstory/bs_4.jpg" alt="아침, 따뜻한 순간을 전하다">
+                </figure>
+                <div class="txt-story">
+                    <h4>아침, 따뜻한 순간을 전하다</h4>
+                    <p>바쁜 하루의 시작에도 bakee의 빵은 갓 구운 따뜻함으로 준비되어 있습니다.<br>고객 한 분 한 분께 진심을 담아 건네는 빵은 단순한 음식이 아니라, 하루를 밝혀주는 작은 위로이자 특별한 선물입니다.</p>
+                    <p>우리는 매일 아침, 정성과 품격이 어우러진 한 조각으로 당신의 일상을 따뜻하게 채워드립니다.</p>
+                </div>
+            </section>
+       </div>
     </main>
 
     <footer>

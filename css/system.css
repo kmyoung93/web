@@ -1,3 +1,21 @@
+@media (min-width: 1920px){
+    body{
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+}
+
+header.fold~main{
+    margin-top: 54px;
+}
+
+main{
+    margin-top: 160px;
+    /* header의 높이만큼 여백을 위로 줌 */
+    transition: margin-top 0.5s ease 0s;
+    min-height: 1500px;
+}
+
 :root{
     /* basic size 1rem */
     --basic-font-pc:20px;
@@ -41,6 +59,11 @@ html{
     font-size: var(--basic-font-pc);
     font-family: 'Pretendard', sans-serif;
     line-height: var(--base-line-height);
+}
+
+em{
+    font-style: inherit;
+    color: var(--bakee-brown-main-800);
 }
 
 h1{
@@ -118,6 +141,15 @@ p{
         width: auto;
         margin: 0 2rem;
     }
+
+    main{
+        margin-top: 94px;
+    }
+
+    header.fold~main{
+    margin-top: 94px;
+    }
+
 }
 
 @media (max-width: 768px){
@@ -127,5 +159,13 @@ p{
     .common-frame{
         width: auto;
         margin: 0 1rem;
+    }
+
+    main{
+        margin-top: 70px;
+    }
+
+    header.fold~main{
+        margin-top: 74px;
     }
 }

@@ -8,14 +8,6 @@
         object-fit: cover;
     }
 
-    main{
-        margin-top: 70px;
-    }
-
-    header.fold~main{
-        margin-top: 74px;
-    }
-
     .banner-cake{
         height: 365px;
     }
