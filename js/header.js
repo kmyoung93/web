@@ -1,51 +1,51 @@
-document.addEventListener("DOMContentLoaded",()=>{
-    let btnAllMenu = document.querySelector(".btn-all-menu")
-    let hiddenGnb = document.querySelector(".hidden-gnb")
+// document.addEventListener("DOMContentLoaded",()=>{
+//     let btnAllMenu = document.querySelector(".btn-all-menu")
+//     let hiddenGnb = document.querySelector(".hidden-gnb")
 
-    //전체메뉴 열기
-    btnAllMenu.addEventListener("click",()=>{
-        hiddenGnb.classList.add("on")
-    })
+//     //전체메뉴 열기
+//     btnAllMenu.addEventListener("click",()=>{
+//         hiddenGnb.classList.add("on")
+//     })
 
-    let btnCloseImg = document.querySelector(".btn-close img")
+//     let btnCloseImg = document.querySelector(".btn-close img")
 
-    //전체메뉴 닫기
-    btnCloseImg.addEventListener("click",()=>{
-        hiddenGnb.classList.remove("on")
-    })
+//     //전체메뉴 닫기
+//     btnCloseImg.addEventListener("click",()=>{
+//         hiddenGnb.classList.remove("on")
+//     })
 
-    let gnbSmartLi = document.querySelectorAll(".gnb-smart>li")
-    gnbSmartLi.forEach((li,index)=>{
-        li.addEventListener("click",()=>{
-            li.classList.toggle("on")
-        })
-    })
+//     let gnbSmartLi = document.querySelectorAll(".gnb-smart>li")
+//     gnbSmartLi.forEach((li,index)=>{
+//         li.addEventListener("click",()=>{
+//             li.classList.toggle("on")
+//         })
+//     })
 
-     //마우스 휠을 올리거나 내릴 때 사용하는 소스코드 
-    let header = document.querySelector("header")
+//      //마우스 휠을 올리거나 내릴 때 사용하는 소스코드 
+//     let header = document.querySelector("header")
 
-    let lastScrollTop = 0
-    window.addEventListener("scroll",()=>{
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop //브라우저의 호환성을 생각하여(파이어폭스, 오페라 등은 window.pageUOffset 프로퍼티가 없음) 스크롤바가 내려온 길이를 계산함
-        if(scrollTop < lastScrollTop){
-            //마우스 휠을 위로 굴렸을 때
-            console.log("마우스 휠을 위로 올림")
-            header.classList.remove("fold")
-        }else{
-            //마우스 휠을 아래로 굴렸을 때
-            console.log("마우스 휠을 아래로 내림")
-            header.classList.add("fold")
-        }
-        lastScrollTop = scrollTop
-    })
+//     let lastScrollTop = 0
+//     window.addEventListener("scroll",()=>{
+//         let scrollTop = window.pageYOffset || document.documentElement.scrollTop //브라우저의 호환성을 생각하여(파이어폭스, 오페라 등은 window.pageUOffset 프로퍼티가 없음) 스크롤바가 내려온 길이를 계산함
+//         if(scrollTop < lastScrollTop){
+//             //마우스 휠을 위로 굴렸을 때
+//             console.log("마우스 휠을 위로 올림")
+//             header.classList.remove("fold")
+//         }else{
+//             //마우스 휠을 아래로 굴렸을 때
+//             console.log("마우스 휠을 아래로 내림")
+//             header.classList.add("fold")
+//         }
+//         lastScrollTop = scrollTop
+//     })
 
-    let gnb = document.querySelector(".gnb")
-    gnb.addEventListener("mouseenter",()=>{
-        header.classList.remove("fold")
-    })
-    header.addEventListener("mouseleave",()=>{
-        header.classList.add("fold")
-    })
+//     let gnb = document.querySelector(".gnb")
+//     gnb.addEventListener("mouseenter",()=>{
+//         header.classList.remove("fold")
+//     })
+//     header.addEventListener("mouseleave",()=>{
+//         header.classList.add("fold")
+//     })
 
 
-})
+// })
