@@ -13,9 +13,25 @@ document.addEventListener("DOMContentLoaded",()=>{
                         <h3>${item.pnameKo}</h3>
                         <h4><em>${item.pnameEn}</em></h4>
                         <p class="ln3">${item.pdesc}</p>
-                        <p class="price">${item.pprice}원</p>
+                        <p class="price"><em>${item.pprice.toLocaleString('ko-KR')}원</em></p>
                     </a>
                 </li>`
     })
     list.innerHTML = res
+
+    // 하트 아이콘 클릭 이벤트
+    list.querySelectorAll(".heart").forEach(heart=>{
+        heart.addEventListener("click",(e)=>{
+            e.preventDefault()
+            e.stopPropagation()
+            const heartImg = heart.querySelector("img")
+            if(heartImg.src.includes("heart_empty")){
+                heartImg.src = "./img/product_list/heart_full.svg"
+                heartImg.alt = "좋아요 선택함"
+            }else{
+                heartImg.src = "./img/product_list/heart_empty.svg"
+                heartImg.alt = "좋아요 선택안함"
+            }
+        })
+    })
 })

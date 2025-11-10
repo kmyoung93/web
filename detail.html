@@ -41,15 +41,27 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
     <!-- 개별 스타일 -->
-     <link rel="stylesheet" href="./css/detail-1920.css">
+    <link rel="stylesheet" href="./css/detail-1920.css">
+    <link rel="stylesheet" href="./css/detail-1440.css">
+    <link rel="stylesheet" href="./css/detail-768.css">
+    <link rel="stylesheet" href="./css/product-1920.css">
+    <link rel="stylesheet" href="./css/product-1440.css">
+    <link rel="stylesheet" href="./css/product-768.css">
+
+    <!-- 상품 정보 -->
+     <script src="./js/product.js"></script>
+     <script src="./js/getQueryParam.js"></script>
+     <script src="./js/detail-control.js"></script>
+     <script src="./js/product-control.js"></script>
+
 </head>
 <body>
     <div class="header-wrap"></div>
     <main>
         <div class="common-frame detail-1">
-            <section class="detail-thumb">
+            <!-- <section class="detail-thumb">
                 <figure class="thumbBig">
-                    <img src="" alt="">
+                    <img src="./img/detail/detail_1.jpg" alt="클래식 티라미수 1번 사진">
                 </figure>
                 <div class="thumb-slider slider-container">
                     <ul class="thumbSmall-list">
@@ -66,14 +78,204 @@
                 <h3>클래식 티라미수</h3>
                 <h4><em>Classic Tiramisu</em></h4>
                 <p class="desc">에스프레소와 마스카포네 치즈가 어우러진 정통 티라미수. 깊은 커피 향과 부드러운 크림이 조화를 이룹니다.</p>
-                <p class="sale"><span>10%</span> <span>28,000원</span></p>
-                <p class="price">25,200원</p>
+                <p class="sale"><span class="per-sale">10%</span> <span class="price-origin">28,000원</span></p>
+                <p class="price"><em>25,200원</em></p>
                 <div class="buy">
                     <a href="#">장바구니</a>
                     <a href="#" class="btn-buy">구매하기</a>
                 </div>
-            </section>
+            </section> -->
         </div>
+        <div class="common-frame detail-2 product">
+            <ul class="sticy-menu">
+                <li><a href="#">많이찾는제품</a></li>
+                <li><a href="#">영양성분</a></li>
+                <li><a href="#">리뷰</a></li>
+            </ul>
+            <h1 class="title-product">많이 찾는 제품</h1>
+            <ul class="list-product">
+                <!-- <li>
+                    <a href="#">
+                        <figure>
+                            <img src="./img/product_list/product/pro_1.jpg" alt="클래식 티라미수">
+                            <span class="heart">
+                                <img src="./img/product_list/heart_empty.svg" alt="좋아요 선택 안함">
+                            </span>
+                        </figure>
+                        <h3>클래식 티라미수</h3>
+                        <h4><em>Classic Tiramisu</em></h4>
+                        <p class="ln3">에스프레소와 마스카포네 치즈가 어우러진 정통 티라미수.깊은 커피 향과 부드러운 크림이 조화를 이룹니다.</p>
+                        <p class="price">28,000원</p>
+                    </a>
+                </li> -->
+            </ul>
+            <h1 class="title-product">영양정보</h1>
+            <div class="info-list">
+                <section class="info-list-1">
+                    <h3>클래식 티라미수</h3>
+                    <p><em>Classic Tiramisu</em></p>
+                    <p>마스카포네 치즈, 생크림, 에스프레소, 레이디핑거 쿠키, 설탕, 달걀 노른자, 코코아파우더, 바닐라 익스트랙트</p>
+                </section>
+                <section class="info-list-2">
+                    <table>
+                        <caption>1회제공량 (100g 기준)</caption>
+                        <tr>
+                            <th>열량</th>
+                            <td>420 kcal</td>
+                        </tr>
+                        <tr>
+                            <th>나트륨</th>
+                            <td>125 mg</td>
+                        </tr>
+                        <tr>
+                            <th>탄수화물</th>
+                            <td>45 g</td>
+                        </tr>
+                        <tr>
+                            <th>당류</th>
+                            <td>28 g</td>
+                        </tr>
+                        <tr>
+                            <th>지방</th>
+                            <td>23 g</td>
+                        </tr>
+                        <tr>
+                            <th>트랜스지방</th>
+                            <td>0.3 g</td>
+                        </tr>
+                        <tr>
+                            <th>포화지방</th>
+                            <td>12 g</td>
+                        </tr>
+                        <tr>
+                            <th>콜레스테롤</th>
+                            <td>95 mg</td>
+                        </tr>
+                        <tr>
+                            <th>단백질</th>
+                            <td>7 g</td>
+                        </tr>
+                        <tr>
+                            <th>식이섬유</th>
+                            <td>1 g</td>
+                        </tr>
+                        <tr>
+                            <th>칼슘</th>
+                            <td>55 mg</td>
+                        </tr>
+                        <tr>
+                            <th>철분</th>
+                            <td>1.1 mg</td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+            <h1 class="title-product">REVIEW</h1>
+            <ul class="list-review">
+                <li>
+                    <section class="list-review-1">
+                        <h3>eun_bakeee</h3>
+                        <div class="like">
+                            <img src="./img/detail/like-star.svg" alt="좋아요 별">
+                            <img src="./img/detail/like-star.svg" alt="좋아요 별">
+                            <img src="./img/detail/like-star.svg" alt="좋아요 별">
+                            <img src="./img/detail/like-star.svg" alt="좋아요 별">
+                            <img src="./img/detail/like-star.svg" alt="좋아요 별">
+                        </div>
+                        <p class="date">2025.09.18</p>
+                    </section>
+                    <section class="list-review-2">
+                        <h4>클래식 티라미수</h4>
+                        <div class="slider-container review-slider">
+                            <ul class="review-track">
+                                <li><img src="./img/detail/rv-1-1.jpg" alt="리뷰 섬네일 이미지 1"></li>
+                                <li><img src="./img/detail/rv1-2.jpg" alt="리뷰 섬네일 이미지 2"></li>
+                                <li><img src="./img/detail/rv1-3.jpg" alt="리뷰 섬네일 이미지 3"></li>
+                                <li><img src="./img/detail/rv1-4.jpg" alt="리뷰 섬네일 이미지 4"></li>
+                                <li><img src="./img/detail/rv1-5.jpg" alt="리뷰 섬네일 이미지 5"></li>
+                                <li><img src="./img/detail/rv1-6.jpg" alt="리뷰 섬네일 이미지 6"></li>
+                            </ul>
+                        </div>
+                        <p class="review-desc">
+                            티라미수를 정말 좋아해서 다양한 카페 제품을 먹어봤는데, bakee의 클래식 티라미수는 진짜로 ‘완성도’가 달라요.
+                            먼저 마스카포네 크림이 지나치게 달지 않고, 굉장히 부드러워서 입안에서 사르르 녹습니다.
+                            크림 층은 풍부하지만 가벼운 느낌이 있어서 느끼함 없이 계속 먹고 싶어지는 맛이에요.
+                            레이디핑거에 적셔진 에스프레소 향도 진하고 깊어서, 크림의 부드러움과 완벽하게 조화됩니다.
+                            마지막에 코코아 파우더의 쌉싸름한 향이 딱 잡아줘서 전체적으로 ‘완벽한 티라미수’였습니다.
+                            커피랑 같이 먹으면 행복감 200%… 꼭 드셔보세요!
+                        </p>
+                    </section>
+                </li>
+                <li>
+                    <section class="list-review-1">
+                        <h3>homecafe_jin</h3>
+                        <div class="like">
+                            <img src="./img/detail/like-star.svg" alt="좋아요 별">
+                            <img src="./img/detail/like-star.svg" alt="좋아요 별">
+                            <img src="./img/detail/like-star.svg" alt="좋아요 별">
+                            <img src="./img/detail/like-star.svg" alt="좋아요 별">
+                            <img src="./img/detail/like-star.svg" alt="좋아요 별">
+                        </div>
+                        <p class="date">2025.10.03</p>
+                    </section>
+                    <section class="list-review-2">
+                        <h4>클래식 티라미수</h4>
+                        <div class="slider-container review-slider">
+                            <ul class="review-track">
+                                <li><img src="./img/detail/rv-1-1.jpg" alt="리뷰 섬네일 이미지 1"></li>
+                                <li><img src="./img/detail/rv1-2.jpg" alt="리뷰 섬네일 이미지 2"></li>
+                                <li><img src="./img/detail/rv1-3.jpg" alt="리뷰 섬네일 이미지 3"></li>
+                                <li><img src="./img/detail/rv1-4.jpg" alt="리뷰 섬네일 이미지 4"></li>
+                                <li><img src="./img/detail/rv1-5.jpg" alt="리뷰 섬네일 이미지 5"></li>
+                                <li><img src="./img/detail/rv1-6.jpg" alt="리뷰 섬네일 이미지 6"></li>
+                            </ul>
+                        </div>
+                        <p class="review-desc">
+                            집에서 홈카페 분위기를 내려고 주문했는데, bakee 티라미수는 집에서도 맛이 그대로 살아있어요.
+                            크림이 정말 섬세하고 깔끔해서 달달한 디저트를 좋아하지 않는 사람도 부담 없이 먹을 수 있는 맛입니다.
+                            에스프레소 향이 진하게 나서 커피 한 잔과 함께 먹으면 훨씬 더 고급스럽게 느껴져요.
+                            냉장 보관 후 바로 먹어도 맛있지만, 5분 정도 실온에 두면 크림 텍스처가 진짜 부드럽게 살아납니다.
+                            양이 조금만 더 많았으면 완벽했을 것 같지만, 맛 자체는 정말 만족스럽습니다.
+                        </p>
+                    </section>
+                </li>
+                <li>
+                    <section class="list-review-1">
+                        <h3>hanul_dessert</h3>
+                        <div class="like">
+                            <img src="./img/detail/like-star.svg" alt="좋아요 별">
+                            <img src="./img/detail/like-star.svg" alt="좋아요 별">
+                            <img src="./img/detail/like-star.svg" alt="좋아요 별">
+                            <img src="./img/detail/like-star.svg" alt="좋아요 별">
+                            <img src="./img/detail/like-star.svg" alt="좋아요 별">
+                        </div>
+                        <p class="date">2025.09.29</p>
+                    </section>
+                    <section class="list-review-2">
+                        <h4>클래식 티라미수</h4>
+                        <div class="slider-container review-slider">
+                            <ul class="review-track">
+                                <li><img src="./img/detail/rv-1-1.jpg" alt="리뷰 섬네일 이미지 1"></li>
+                                <li><img src="./img/detail/rv1-2.jpg" alt="리뷰 섬네일 이미지 2"></li>
+                                <li><img src="./img/detail/rv1-3.jpg" alt="리뷰 섬네일 이미지 3"></li>
+                                <li><img src="./img/detail/rv1-4.jpg" alt="리뷰 섬네일 이미지 4"></li>
+                                <li><img src="./img/detail/rv1-5.jpg" alt="리뷰 섬네일 이미지 5"></li>
+                                <li><img src="./img/detail/rv1-6.jpg" alt="리뷰 섬네일 이미지 6"></li>
+                            </ul>
+                        </div>
+                        <p class="review-desc">
+                            이탈리아 현지에서 먹어본 티라미수와 가장 비슷한 맛이었어요.
+                            마스카포네 크림의 농도와 풍미가 딱 정통 스타일이고, 달걀 향도 과하지 않아 정말 부드럽습니다.
+                            레이디핑거에 적신 에스프레소가 너무 묽지도, 너무 강하지도 않아서 전체 구조가 안정적이에요.
+                            크림 층이 두꺼운데도 무겁지 않아서 한 조각을 금방 다 먹었고, 먹고 나서도 깔끔하게 마무리돼요.
+                            디저트 좋아하는 친구한테도 선물했는데, 포장도 세련돼서 선물용으로 딱 좋다고 하더라고요.
+                            베이키는 페이스트리뿐 아니라 케이크류도 진짜 잘 만드는 곳이에요.
+                        </p>
+                    </section>
+                </li>
+            </ul>
+        </div>
+
     </main>
     <div class="footer-wrap"></div>
     <script src="./js/include.js"></script>

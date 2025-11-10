@@ -1,0 +1,22 @@
+@media (max-width: 1440px){
+    .detail-1{
+        margin: 10rem 2rem var(--space-3x-large);
+    }
+
+    .thumbSmall-list>li{
+        width: 116px;
+        height: 116px;
+    }
+
+    .sticy-menu{
+        top: 100px;
+    }
+
+    .info-list .info-list-1{
+        flex: 4;
+    }
+
+    .info-list .info-list-2{
+        flex: 8;
+    }
+}
