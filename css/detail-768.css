@@ -16,4 +16,12 @@
     .sticy-menu{
         top: 78px;
     }
+
+    .info-list{
+        flex-direction: column;
+    }
+
+    .review-track li{
+        width:197px;
+    }
 }
